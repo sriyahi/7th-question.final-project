@@ -1,0 +1,49 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <Label>Enter National.No :</Label>
+    <input id="n" type="text" placeholder="national.No">
+    <button onclick="test()">Check</button>
+</body>
+
+<script>
+    function test()
+    {
+        var a = document.getElementById('n').value;
+        if (isNaN(a))
+         {
+           alert("please enter a number !");
+         } else if (a == "")
+         {
+            alert("Please write a code !")
+         } else if (a.length < 10)
+         {
+        alert("Your entered code is less than 10!")
+         } else 
+         {
+           var b = 0;
+           var c = parseInt(c);
+           for (let i = 0; i < a.length; i++) 
+            {
+              c = a[i] * (a.length - i);
+              b += c;
+            }
+           var x = b % 11;
+           if (x === 0) 
+           {
+             alert("Valid Code !");
+           } else 
+           {
+             alert("Invalid Code !");
+          } 
+          b = 0;
+         }
+    }
+    
+</script>
+</html>
